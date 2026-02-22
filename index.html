@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO 基礎標籤 -->
+    <title>艾琳老師哺乳與美學 | 高雄左營泌乳護理、無痛塞奶處理、空間租借</title>
+    <meta name="description" content="高雄左營首選泌乳專家。提供產後無痛乳腺疏通、塞奶處理、巴西熱蠟除毛與美甲工作室空間租借，專業護理師手法，給您最溫柔的照護。">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- AEO 結構化數據 (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "艾琳老師哺乳與美學",
+      "description": "提供專業泌乳護理、美學管理及美業空間出租",
+      "telephone": "+886-900-000-000",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "左營區",
+        "addressLocality": "高雄市",
+        "addressRegion": "TW",
+        "postalCode": "813",
+        "addressCountry": "TW"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "09:00",
+        "closes": "21:00"
+      }
+    }
+    </script>
+
+    <style>
+        .page { display: none; }
+        .page.active { display: block; animation: fadeIn 0.5s ease-out; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-white font-sans text-slate-900">
+
+    <!-- 導航列 -->
+    <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 py-3 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center gap-2 cursor-pointer" onclick="showPage('home')">
+                <div class="w-10 h-10 bg-gradient-to-br from-rose-400 to-rose-600 rounded-xl flex items-center justify-center text-white font-bold">E</div>
+                <div class="flex flex-col">
+                    <span class="font-bold text-lg text-slate-800 leading-none">艾琳老師哺乳與美學</span>
+                    <span class="text-[10px] text-slate-400 font-medium tracking-tighter">KAOHSIUNG ZUOYING</span>
+                </div>
+            </div>
+            
+            <div class="hidden lg:flex gap-8 items-center">
+                <button onclick="showPage('lactation')" class="nav-link font-bold text-slate-600 hover:text-rose-500 transition-colors">泌乳護理</button>
+                <button onclick="showPage('beauty')" class="nav-link font-bold text-slate-600 hover:text-indigo-500 transition-colors">美學管理</button>
+                <button onclick="showPage('rental')" class="nav-link font-bold text-slate-600 hover:text-teal-500 transition-colors">空間租借</button>
+                <a href="https://line.me" class="bg-slate-900 text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-md">立即預約</a>
+            </div>
+
+            <button class="lg:hidden p-2" onclick="toggleMenu()">
+                <i data-lucide="menu" id="menu-icon"></i>
+            </button>
+        </div>
+
+        <!-- 手機版選單 -->
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white border-b shadow-2xl p-6 flex flex-col gap-4">
+            <button onclick="showPage('lactation')" class="text-left py-3 font-bold text-lg border-b text-rose-600">專業泌乳護理</button>
+            <button onclick="showPage('beauty')" class="text-left py-3 font-bold text-lg border-b text-indigo-600">高端美學管理</button>
+            <button onclick="showPage('rental')" class="text-left py-3 font-bold text-lg border-b text-teal-600">空間租借方案</button>
+            <button onclick="showPage('home')" class="text-left py-3 font-bold text-lg text-slate-400">回首頁</button>
+        </div>
+    </nav>
+
+    <main id="main-content" class="min-h-screen">
+        
+        <!-- 首頁分流 (Home) -->
+        <section id="page-home" class="page active">
+            <div class="h-screen flex flex-col md:flex-row">
+                <article onclick="showPage('lactation')" class="flex-1 relative group cursor-pointer overflow-hidden border-b md:border-b-0 md:border-r border-white/10">
+                    <div class="absolute inset-0 bg-rose-900/60 group-hover:bg-rose-900/40 transition-all duration-700 z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1555252333-9f8e92e65ee9?auto=format&fit=crop&q=80" alt="泌乳護理" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
+                    <div class="relative z-20 h-full flex flex-col justify-center items-center text-white p-6 text-center">
+                        <i data-lucide="heart-pulse" class="w-12 h-12 mb-4 text-rose-300"></i>
+                        <h2 class="text-3xl font-black mb-3">專業泌乳</h2>
+                        <p class="text-sm opacity-90 mb-6">解決塞奶/石頭奶/無痛疏通</p>
+                        <div class="bg-white/20 backdrop-blur-sm border border-white/30 text-white px-6 py-2 rounded-full font-bold group-hover:bg-white group-hover:text-rose-600 transition-all">進入專區</div>
+                    </div>
+                </article>
+                <article onclick="showPage('beauty')" class="flex-1 relative group cursor-pointer overflow-hidden border-b md:border-b-0 md:border-r border-white/10">
+                    <div class="absolute inset-0 bg-indigo-900/60 group-hover:bg-indigo-900/40 transition-all duration-700 z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?auto=format&fit=crop&q=80" alt="美學管理" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
+                    <div class="relative z-20 h-full flex flex-col justify-center items-center text-white p-6 text-center">
+                        <i data-lucide="sparkles" class="w-12 h-12 mb-4 text-indigo-300"></i>
+                        <h2 class="text-3xl font-black mb-3">高端美學</h2>
+                        <p class="text-sm opacity-90 mb-6">巴西除毛/水飛梭/皮膚管理</p>
+                        <div class="bg-white/20 backdrop-blur-sm border border-white/30 text-white px-6 py-2 rounded-full font-bold group-hover:bg-white group-hover:text-indigo-600 transition-all">進入專區</div>
+                    </div>
+                </article>
+                <article onclick="showPage('rental')" class="flex-1 relative group cursor-pointer overflow-hidden">
+                    <div class="absolute inset-0 bg-teal-900/60 group-hover:bg-teal-900/40 transition-all duration-700 z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1596462502278-27bfad450526?auto=format&fit=crop&q=80" alt="空間租借" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
+                    <div class="relative z-20 h-full flex flex-col justify-center items-center text-white p-6 text-center">
+                        <i data-lucide="layout" class="w-12 h-12 mb-4 text-teal-300"></i>
+                        <h2 class="text-3xl font-black mb-3">空間租借</h2>
+                        <p class="text-sm opacity-90 mb-6">共享工作室/美甲位/美容床</p>
+                        <div class="bg-white/20 backdrop-blur-sm border border-white/30 text-white px-6 py-2 rounded-full font-bold group-hover:bg-white group-hover:text-teal-600 transition-all">查看方案</div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 泌乳專區 (Lactation) -->
+        <section id="page-lactation" class="page pt-24 pb-32">
+            <div class="max-w-4xl mx-auto px-4">
+                <button onclick="showPage('home')" class="flex items-center gap-2 text-rose-500 font-bold mb-8 hover:-translate-x-1 transition-transform">
+                    <i data-lucide="arrow-left"></i> 返回首頁
+                </button>
+                <h1 class="text-4xl md:text-5xl font-black mb-6">專業無痛<span class="text-rose-500">乳腺疏通</span></h1>
+                <p class="text-slate-600 text-lg mb-12">高雄左營專業泌乳推薦。解決塞奶、石頭奶困擾，專業護理師手法，溫柔疏通乳腺。</p>
+                <div class="space-y-4">
+                    <div class="p-6 bg-rose-50 rounded-2xl border border-rose-100">
+                        <h4 class="font-bold text-rose-700">急難處理 24H 優先預約</h4>
+                        <p class="text-sm text-slate-500">硬塊、發熱、局部紅腫？我們提供優先排程服務。</p>
+                    </div>
+                    <!-- 項目清單 -->
+                    <div class="bg-white border rounded-3xl p-6 flex justify-between items-center shadow-sm">
+                        <div>
+                            <h4 class="font-bold">無痛乳腺疏通</h4>
+                            <p class="text-xs text-slate-400">處理塞奶、硬塊、小白點</p>
+                        </div>
+                        <div class="text-rose-500 font-black">NT$ 2,500</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 美學專區 (Beauty) -->
+        <section id="page-beauty" class="page pt-24 pb-32">
+            <div class="max-w-4xl mx-auto px-4">
+                <button onclick="showPage('home')" class="flex items-center gap-2 text-indigo-500 font-bold mb-8 hover:-translate-x-1 transition-transform">
+                    <i data-lucide="arrow-left"></i> 返回首頁
+                </button>
+                <h1 class="text-4xl md:text-5xl font-black mb-6">高端<span class="text-indigo-600">美學管理</span></h1>
+                <p class="text-slate-600 text-lg mb-12">精細管理每一吋肌膚。巴西熱蠟除毛、韓式水飛梭、皮膚管理。</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white p-8 rounded-3xl border shadow-sm">
+                        <i data-lucide="sparkles" class="text-indigo-500 mb-4"></i>
+                        <h4 class="font-bold text-xl">巴西熱蠟除毛</h4>
+                        <p class="text-sm text-slate-400 mt-2">私密處全除，使用頂級敏感肌專用蠟。</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl border shadow-sm">
+                        <i data-lucide="award" class="text-indigo-500 mb-4"></i>
+                        <h4 class="font-bold text-xl">韓式水飛梭</h4>
+                        <p class="text-sm text-slate-400 mt-2">深層清潔毛孔，瞬效亮白透亮。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 租借專區 (Rental) -->
+        <section id="page-rental" class="page pt-24 pb-32">
+            <div class="max-w-4xl mx-auto px-4">
+                <button onclick="showPage('home')" class="flex items-center gap-2 text-teal-600 font-bold mb-8 hover:-translate-x-1 transition-transform">
+                    <i data-lucide="arrow-left"></i> 返回首頁
+                </button>
+                <h1 class="text-4xl md:text-5xl font-black mb-6">共享<span class="text-teal-600">工作室租借</span></h1>
+                <p class="text-slate-600 text-lg mb-12">專為美業職人打造。高雄左營美甲、美容床位彈性租借方案。</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-3xl border text-center">
+                        <h4 class="font-bold">彈性時租</h4>
+                        <div class="text-2xl font-black text-teal-600 my-2">NT$ 200起</div>
+                        <p class="text-xs text-slate-400">最少 2 小時起租</p>
+                    </div>
+                    <div class="bg-slate-900 text-white p-6 rounded-3xl text-center shadow-xl">
+                        <h4 class="font-bold">全日包租</h4>
+                        <div class="text-2xl font-black text-teal-400 my-2">NT$ 1,200</div>
+                        <p class="text-xs opacity-70">適合高客量日使用</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-3xl border text-center">
+                        <h4 class="font-bold">月度包位</h4>
+                        <div class="text-2xl font-black text-teal-600 my-2">NT$ 12,000</div>
+                        <p class="text-xs text-slate-400">創業首選，免負擔水電</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 頁尾 -->
+    <footer class="bg-slate-900 text-slate-400 py-20 px-4">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-sm text-center md:text-left">
+            <div>
+                <div class="flex items-center justify-center md:justify-start gap-2 text-white mb-6">
+                    <div class="w-8 h-8 bg-rose-500 rounded-lg flex items-center justify-center font-bold">E</div>
+                    <span class="font-bold text-lg">艾琳老師哺乳與美學</span>
+                </div>
+                <p>深耕高雄左營，為女性提供最專業的產後護理與美容方案。</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6">服務據點</h4>
+                <p class="flex items-center justify-center md:justify-start gap-2"><i data-lucide="map-pin" class="w-4 h-4"></i> 高雄市左營區</p>
+                <p class="flex items-center justify-center md:justify-start gap-2 mt-2"><i data-lucide="clock" class="w-4 h-4"></i> 09:00 - 21:00 (預約制)</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6">快速連結</h4>
+                <div class="flex flex-col gap-2">
+                    <button onclick="showPage('lactation')" class="hover:text-white">泌乳護理</button>
+                    <button onclick="showPage('beauty')" class="hover:text-white">美學管理</button>
+                    <button onclick="showPage('rental')" class="hover:text-white">空間租借</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 手機版懸浮按鈕 -->
+    <div class="fixed bottom-6 left-4 right-4 z-50 md:hidden flex gap-3">
+        <a href="tel:0900000000" class="flex-1 bg-white border-2 border-slate-900 py-4 rounded-2xl flex items-center justify-center gap-2 font-bold shadow-xl">
+            <i data-lucide="phone" class="w-5 h-5"></i> 撥打電話
+        </a>
+        <a href="https://line.me" class="flex-[2] bg-[#06C755] text-white py-4 rounded-2xl flex items-center justify-center gap-2 font-bold shadow-xl">
+            <i data-lucide="message-circle" class="w-5 h-5"></i> Line 預約
+        </a>
+    </div>
+
+    <script>
+        // 初始化圖標
+        lucide.createIcons();
+
+        // 頁面切換邏輯
+        function showPage(pageId) {
+            // 隱藏所有頁面
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            // 顯示指定頁面
+            document.getElementById('page-' + pageId).classList.add('active');
+            // 關閉手機選單
+            document.getElementById('mobile-menu').classList.add('hidden');
+            // 捲動到頂部
+            window.scrollTo(0, 0);
+            
+            // 更新 SEO 標題 (範例)
+            const titles = {
+                home: "艾琳老師哺乳與美學 | 高雄左營泌乳、除毛、空間租借",
+                lactation: "專業泌乳護理 - 高雄左營無痛塞奶處理",
+                beauty: "高端美學管理 - 巴西熱蠟除毛與水飛梭",
+                rental: "空間租借方案 - 高雄美業共享工作室"
+            };
+            document.title = titles[pageId];
+        }
+
+        // 手機版選單切換
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
